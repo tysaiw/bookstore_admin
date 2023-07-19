@@ -1,0 +1,13 @@
+<h1>書籍上架</h1>
+<%= form_with(model: @product, data:{turbo: false}) do |f| %>
+  <%= f.label :title, "title" %>
+  <%= f.text_field :title %><br/>
+  <%= f.label :abstract, "abstract" %>
+  <%= f.text_area :abstract %><br/>
+  <%= f.label :num_pages, "num_pages" %>
+  <%= f.number_field :num_pages %><br/>
+  <%= f.label :price, "price" %>
+  <%= f.number_field :price %><br/>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>書籍管理列表</h1>
+<%= link_to "書籍上架", new_product_path %>
+
+<% @products.each do |product| %>
+  <ul>
+    <li>
+    <%= product.title %>
+    <%= product.price %>
+      <%= link_to "編輯", edit_product_path(product) %>
+      <%= link_to "刪除", product_path(product), data:{turbo_method: "delete", turbo_confirm: "R U sure?"} %>
+    </li>
+  </ul>
+  <% end %>
